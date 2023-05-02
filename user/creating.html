@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        * {
+            margin: 0;
+            /* padding: 0; */
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+
+        }
+
+        body {
+            width: 100vw;
+            height: 100vh;
+            background-color: #bd8181;
+        }
+
+        .mainContainer {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+
+        }
+
+        .mainForm {
+            width: 60%;
+        }
+
+        .navbar {
+            background-color: #222;
+            color: #fff;
+            padding: 10px;
+            justify-content: space-between;
+        }
+
+        .navbar a {
+            color: #fff;
+            text-decoration: none;
+            margin-right: 10px;
+            display: flex;
+
+
+        }
+
+        .MainRow {
+            display: flex;
+            left: 100px;
+        }
+
+        .col-md-6 {
+            flex: 0 0 50%;
+            max-width: 50%;
+            padding: 20px;
+        }
+
+        .card {
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+        }
+
+        h2 {
+            margin-top: 0;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        input[type="number"],
+        input[type="text"],
+        input[type="email"],
+        input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+        }
+
+        input[type="radio"] {
+            margin-right: 5px;
+        }
+
+        .btn {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            background-color: #007bff;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        .btn-primary {
+            background-color: #007bff;
+        }
+
+        .btn-primary:hover {
+            background-color: #0056b3;
+        }
+    </style>
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="navbar">
+        <div class="MainRow">
+            <a href="#">CRUD API</a>
+            <a href="creating.html">Home</a>
+            <a href="creating.html">Create</a>
+            <a href="get_allUser1.php">Read</a>
+            <a href="updating.html">Update</a>
+            <a href="updating.html">Delete</a>
+        </div>
+    </div>
+        <div class="mainContainer">
+            <div class="mainForm">
+                <form action="../php/handle_post_req.php" method="POST">
+                    <fieldset>
+                        <h2>Create a new user</h2>
+                        <div>
+                            <label for="firstname">First name:</label>
+                            <input type="text" name="firstname" id="firstname" placeholder="Enter your first name"
+                                required>
+                        </div>
+                        <div>
+                            <label for="lastname">Last name:</label>
+                            <input type="text" name="lastname" id="lastname" placeholder="Enter your last name"
+                                required>
+                        </div>
+                        <div>
+                            <label for="gender">Gender:</label>
+                            <div>
+                                <input type="radio" name="gender" id="male" value="male" required>
+                                <label for="male">Male</label>
+                            </div>
+                            <div>
+                                <input type="radio" name="gender" id="female" value="female" required>
+                                <label for="female">Female</label>
+                            </div>
+                        </div>
+                        <div>
+                            <label for="email">Email address:</label>
+                            <input type="email" name="email" id="email" placeholder="Enter your email" required>
+                        </div>
+                        <div>
+                            <label for="password">Password:</label>
+                            <input type="password" name="password" id="password" placeholder="Enter your password"
+                                required>
+                        </div>
+                        <button type="submit" name="submit" class="btn">Sign up</button>
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+    
+</body>
+
+</html>
